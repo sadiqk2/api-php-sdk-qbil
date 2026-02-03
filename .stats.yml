@@ -1,0 +1,4 @@
+configured_endpoints: 52
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/qbil-software%2Fqbil-php-sdk-9abec18295cfc751c7789f72f064e350916f1d42843be136f05ade3ee5fe871b.yml
+openapi_spec_hash: 38132c4324efa54e915ac5a9dcd01ea3
+config_hash: 6bb0ea547199efc1bc60ee482552d69b
