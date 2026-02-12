@@ -15,7 +15,7 @@ use QbilPhpSDK\Core\Contracts\BaseModel;
  * @see QbilPhpSDK\Services\V1\TradeConditionsService::list()
  *
  * @phpstan-type TradeConditionListParamsShape = array{
- *   id?: list<string>|null, itemsPerPage?: int|null, page?: int|null
+ *   id?: string|null, itemsPerPage?: int|null, page?: int|null
  * }
  */
 final class TradeConditionListParams implements BaseModel
@@ -24,9 +24,8 @@ final class TradeConditionListParams implements BaseModel
     use SdkModel;
     use SdkParams;
 
-    /** @var list<string>|null $id */
-    #[Optional(list: 'string')]
-    public ?array $id;
+    #[Optional]
+    public ?string $id;
 
     /**
      * The number of items per page.
@@ -49,11 +48,9 @@ final class TradeConditionListParams implements BaseModel
      * Construct an instance from the required parameters.
      *
      * You must use named parameters to construct any parameters with a default value.
-     *
-     * @param list<string>|null $id
      */
     public static function with(
-        ?array $id = null,
+        ?string $id = null,
         ?int $itemsPerPage = null,
         ?int $page = null
     ): self {
@@ -66,10 +63,7 @@ final class TradeConditionListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $id
-     */
-    public function withID(array $id): self
+    public function withID(string $id): self
     {
         $self = clone $this;
         $self['id'] = $id;

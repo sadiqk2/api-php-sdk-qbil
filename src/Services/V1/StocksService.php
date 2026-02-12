@@ -55,9 +55,7 @@ final class StocksService implements StocksContract
      * Retrieves the collection of Stock resources.
      *
      * @param int $itemsPerPage The number of items per page
-     * @param list<string> $ourReference
      * @param int $page The collection page number
-     * @param list<float> $remainingQuantity
      * @param RequestOpts|null $requestOptions
      *
      * @return list<Stock>
@@ -66,9 +64,9 @@ final class StocksService implements StocksContract
      */
     public function list(
         int $itemsPerPage = 40,
-        ?array $ourReference = null,
+        ?string $ourReference = null,
         int $page = 1,
-        ?array $remainingQuantity = null,
+        ?float $remainingQuantity = null,
         ?string $remainingQuantityBetween = null,
         ?string $remainingQuantityGt = null,
         ?string $remainingQuantityGte = null,

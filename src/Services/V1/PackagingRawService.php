@@ -55,7 +55,7 @@ final class PackagingRawService implements PackagingRawContract
      * Retrieves the collection of Packaging resources.
      *
      * @param array{
-     *   code?: list<string>, itemsPerPage?: int, page?: int
+     *   code?: string, itemsPerPage?: int, page?: int
      * }|PackagingListParams $params
      * @param RequestOpts|null $requestOptions
      *

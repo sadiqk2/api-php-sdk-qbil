@@ -55,7 +55,7 @@ final class PalletsRawService implements PalletsRawContract
      * Retrieves the collection of Pallet resources.
      *
      * @param array{
-     *   code?: list<string>, itemsPerPage?: int, page?: int
+     *   code?: string, itemsPerPage?: int, page?: int
      * }|PalletListParams $params
      * @param RequestOpts|null $requestOptions
      *

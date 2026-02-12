@@ -54,7 +54,6 @@ final class PackagingService implements PackagingContract
      *
      * Retrieves the collection of Packaging resources.
      *
-     * @param list<string> $code
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
      * @param RequestOpts|null $requestOptions
@@ -64,7 +63,7 @@ final class PackagingService implements PackagingContract
      * @throws APIException
      */
     public function list(
-        ?array $code = null,
+        ?string $code = null,
         int $itemsPerPage = 40,
         int $page = 1,
         RequestOptions|array|null $requestOptions = null,

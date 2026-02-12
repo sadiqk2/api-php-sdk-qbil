@@ -163,7 +163,6 @@ final class V1Service implements V1Contract
      *
      * @param int $itemsPerPage The number of items per page
      * @param Location|value-of<Location> $location Filter by location(e.g. `custom-fields?location=contract` will return all custom fields placed in contract and contract-lines)
-     * @param list<string> $name
      * @param int $page The collection page number
      * @param RequestOpts|null $requestOptions
      *
@@ -174,7 +173,7 @@ final class V1Service implements V1Contract
     public function listCustomFields(
         int $itemsPerPage = 40,
         Location|string|null $location = null,
-        ?array $name = null,
+        ?string $name = null,
         int $page = 1,
         RequestOptions|array|null $requestOptions = null,
     ): array {

@@ -55,7 +55,7 @@ final class PaymentConditionsRawService implements PaymentConditionsRawContract
      * Retrieves the collection of PaymentCondition resources.
      *
      * @param array{
-     *   id?: list<string>, itemsPerPage?: int, page?: int
+     *   id?: string, itemsPerPage?: int, page?: int
      * }|PaymentConditionListParams $params
      * @param RequestOpts|null $requestOptions
      *

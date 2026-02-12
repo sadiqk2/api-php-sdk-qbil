@@ -146,7 +146,7 @@ final class OrdersRawService implements OrdersRawContract
      *   createdAtBefore?: string,
      *   createdAtStrictlyAfter?: string,
      *   createdAtStrictlyBefore?: string,
-     *   displayNumber?: list<string>,
+     *   displayNumber?: string,
      *   itemsPerPage?: int,
      *   lastUpdatedAtAfter?: string,
      *   lastUpdatedAtBefore?: string,
@@ -157,7 +157,7 @@ final class OrdersRawService implements OrdersRawContract
      *   orderDateStrictlyAfter?: string,
      *   orderDateStrictlyBefore?: string,
      *   page?: int,
-     *   subsidiary?: list<string>,
+     *   subsidiary?: string,
      * }|OrderListParams $params
      * @param RequestOpts|null $requestOptions
      *

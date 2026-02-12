@@ -70,7 +70,7 @@ final class SalesInvoicesRawService implements SalesInvoicesRawContract
      *   lastUpdatedAtStrictlyAfter?: string,
      *   lastUpdatedAtStrictlyBefore?: string,
      *   page?: int,
-     *   type?: list<string>,
+     *   type?: string,
      * }|SalesInvoiceListParams $params
      * @param RequestOpts|null $requestOptions
      *
