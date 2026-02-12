@@ -16,9 +16,9 @@ use QbilPhpSDK\Core\Contracts\BaseModel;
  *
  * @phpstan-type StockListParamsShape = array{
  *   itemsPerPage?: int|null,
- *   ourReference?: list<string>|null,
+ *   ourReference?: string|null,
  *   page?: int|null,
- *   remainingQuantity?: list<float>|null,
+ *   remainingQuantity?: float|null,
  *   remainingQuantityBetween?: string|null,
  *   remainingQuantityGt?: string|null,
  *   remainingQuantityGte?: string|null,
@@ -38,9 +38,8 @@ final class StockListParams implements BaseModel
     #[Optional]
     public ?int $itemsPerPage;
 
-    /** @var list<string>|null $ourReference */
-    #[Optional(list: 'string')]
-    public ?array $ourReference;
+    #[Optional]
+    public ?string $ourReference;
 
     /**
      * The collection page number.
@@ -48,9 +47,8 @@ final class StockListParams implements BaseModel
     #[Optional]
     public ?int $page;
 
-    /** @var list<float>|null $remainingQuantity */
-    #[Optional(list: 'float')]
-    public ?array $remainingQuantity;
+    #[Optional]
+    public ?float $remainingQuantity;
 
     #[Optional]
     public ?string $remainingQuantityBetween;
@@ -76,15 +74,12 @@ final class StockListParams implements BaseModel
      * Construct an instance from the required parameters.
      *
      * You must use named parameters to construct any parameters with a default value.
-     *
-     * @param list<string>|null $ourReference
-     * @param list<float>|null $remainingQuantity
      */
     public static function with(
         ?int $itemsPerPage = null,
-        ?array $ourReference = null,
+        ?string $ourReference = null,
         ?int $page = null,
-        ?array $remainingQuantity = null,
+        ?float $remainingQuantity = null,
         ?string $remainingQuantityBetween = null,
         ?string $remainingQuantityGt = null,
         ?string $remainingQuantityGte = null,
@@ -117,10 +112,7 @@ final class StockListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $ourReference
-     */
-    public function withOurReference(array $ourReference): self
+    public function withOurReference(string $ourReference): self
     {
         $self = clone $this;
         $self['ourReference'] = $ourReference;
@@ -139,10 +131,7 @@ final class StockListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<float> $remainingQuantity
-     */
-    public function withRemainingQuantity(array $remainingQuantity): self
+    public function withRemainingQuantity(float $remainingQuantity): self
     {
         $self = clone $this;
         $self['remainingQuantity'] = $remainingQuantity;

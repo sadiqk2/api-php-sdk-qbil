@@ -31,10 +31,7 @@ final class V1RawService implements V1RawContract
      * Discover available custom fields and their keys. Use the `name` property as the key when setting custom field values in write APIs (e.g., PATCH /container-orders). Filter by `location` to find fields applicable to specific modules (e.g., order, contract, product).
      *
      * @param array{
-     *   itemsPerPage?: int,
-     *   location?: value-of<Location>,
-     *   name?: list<string>,
-     *   page?: int,
+     *   itemsPerPage?: int, location?: value-of<Location>, name?: string, page?: int
      * }|V1ListCustomFieldsParams $params
      * @param RequestOpts|null $requestOptions
      *

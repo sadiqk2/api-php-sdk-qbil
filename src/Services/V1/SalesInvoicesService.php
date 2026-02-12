@@ -56,7 +56,6 @@ final class SalesInvoicesService implements SalesInvoicesContract
      *
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
-     * @param list<string> $type
      * @param RequestOpts|null $requestOptions
      *
      * @return list<SalesInvoice>
@@ -78,7 +77,7 @@ final class SalesInvoicesService implements SalesInvoicesContract
         ?string $lastUpdatedAtStrictlyAfter = null,
         ?string $lastUpdatedAtStrictlyBefore = null,
         int $page = 1,
-        ?array $type = null,
+        ?string $type = null,
         RequestOptions|array|null $requestOptions = null,
     ): array {
         $params = Util::removeNulls(

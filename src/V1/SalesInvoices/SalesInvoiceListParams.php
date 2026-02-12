@@ -29,7 +29,7 @@ use QbilPhpSDK\Core\Contracts\BaseModel;
  *   lastUpdatedAtStrictlyAfter?: string|null,
  *   lastUpdatedAtStrictlyBefore?: string|null,
  *   page?: int|null,
- *   type?: list<string>|null,
+ *   type?: string|null,
  * }
  */
 final class SalesInvoiceListParams implements BaseModel
@@ -86,9 +86,8 @@ final class SalesInvoiceListParams implements BaseModel
     #[Optional]
     public ?int $page;
 
-    /** @var list<string>|null $type */
-    #[Optional(list: 'string')]
-    public ?array $type;
+    #[Optional]
+    public ?string $type;
 
     public function __construct()
     {
@@ -99,8 +98,6 @@ final class SalesInvoiceListParams implements BaseModel
      * Construct an instance from the required parameters.
      *
      * You must use named parameters to construct any parameters with a default value.
-     *
-     * @param list<string>|null $type
      */
     public static function with(
         ?string $createdAtAfter = null,
@@ -117,7 +114,7 @@ final class SalesInvoiceListParams implements BaseModel
         ?string $lastUpdatedAtStrictlyAfter = null,
         ?string $lastUpdatedAtStrictlyBefore = null,
         ?int $page = null,
-        ?array $type = null,
+        ?string $type = null,
     ): self {
         $self = new self;
 
@@ -264,10 +261,7 @@ final class SalesInvoiceListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $type
-     */
-    public function withType(array $type): self
+    public function withType(string $type): self
     {
         $self = clone $this;
         $self['type'] = $type;

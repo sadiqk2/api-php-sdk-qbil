@@ -19,7 +19,7 @@ use QbilPhpSDK\Core\Contracts\BaseModel;
  *   createdAtBefore?: string|null,
  *   createdAtStrictlyAfter?: string|null,
  *   createdAtStrictlyBefore?: string|null,
- *   displayNumber?: list<string>|null,
+ *   displayNumber?: string|null,
  *   itemsPerPage?: int|null,
  *   lastUpdatedAtAfter?: string|null,
  *   lastUpdatedAtBefore?: string|null,
@@ -30,7 +30,7 @@ use QbilPhpSDK\Core\Contracts\BaseModel;
  *   orderDateStrictlyAfter?: string|null,
  *   orderDateStrictlyBefore?: string|null,
  *   page?: int|null,
- *   subsidiary?: list<string>|null,
+ *   subsidiary?: string|null,
  * }
  */
 final class OrderListParams implements BaseModel
@@ -51,9 +51,8 @@ final class OrderListParams implements BaseModel
     #[Optional]
     public ?string $createdAtStrictlyBefore;
 
-    /** @var list<string>|null $displayNumber */
-    #[Optional(list: 'string')]
-    public ?array $displayNumber;
+    #[Optional]
+    public ?string $displayNumber;
 
     /**
      * The number of items per page.
@@ -91,9 +90,8 @@ final class OrderListParams implements BaseModel
     #[Optional]
     public ?int $page;
 
-    /** @var list<string>|null $subsidiary */
-    #[Optional(list: 'string')]
-    public ?array $subsidiary;
+    #[Optional]
+    public ?string $subsidiary;
 
     public function __construct()
     {
@@ -104,16 +102,13 @@ final class OrderListParams implements BaseModel
      * Construct an instance from the required parameters.
      *
      * You must use named parameters to construct any parameters with a default value.
-     *
-     * @param list<string>|null $displayNumber
-     * @param list<string>|null $subsidiary
      */
     public static function with(
         ?string $createdAtAfter = null,
         ?string $createdAtBefore = null,
         ?string $createdAtStrictlyAfter = null,
         ?string $createdAtStrictlyBefore = null,
-        ?array $displayNumber = null,
+        ?string $displayNumber = null,
         ?int $itemsPerPage = null,
         ?string $lastUpdatedAtAfter = null,
         ?string $lastUpdatedAtBefore = null,
@@ -124,7 +119,7 @@ final class OrderListParams implements BaseModel
         ?string $orderDateStrictlyAfter = null,
         ?string $orderDateStrictlyBefore = null,
         ?int $page = null,
-        ?array $subsidiary = null,
+        ?string $subsidiary = null,
     ): self {
         $self = new self;
 
@@ -182,10 +177,7 @@ final class OrderListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $displayNumber
-     */
-    public function withDisplayNumber(array $displayNumber): self
+    public function withDisplayNumber(string $displayNumber): self
     {
         $self = clone $this;
         $self['displayNumber'] = $displayNumber;
@@ -283,10 +275,7 @@ final class OrderListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $subsidiary
-     */
-    public function withSubsidiary(array $subsidiary): self
+    public function withSubsidiary(string $subsidiary): self
     {
         $self = clone $this;
         $self['subsidiary'] = $subsidiary;
