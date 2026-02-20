@@ -31,7 +31,7 @@ final class V1Test extends TestCase
     public function testListCustomFields(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->listCustomFields();

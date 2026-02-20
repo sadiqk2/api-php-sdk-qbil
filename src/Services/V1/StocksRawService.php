@@ -57,9 +57,9 @@ final class StocksRawService implements StocksRawContract
      *
      * @param array{
      *   itemsPerPage?: int,
-     *   ourReference?: list<string>,
+     *   ourReference?: string,
      *   page?: int,
-     *   remainingQuantity?: list<float>,
+     *   remainingQuantity?: float,
      *   remainingQuantityBetween?: string,
      *   remainingQuantityGt?: string,
      *   remainingQuantityGte?: string,

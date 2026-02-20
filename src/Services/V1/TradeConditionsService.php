@@ -54,7 +54,6 @@ final class TradeConditionsService implements TradeConditionsContract
      *
      * Retrieves the collection of TradeCondition resources.
      *
-     * @param list<string> $id
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
      * @param RequestOpts|null $requestOptions
@@ -64,7 +63,7 @@ final class TradeConditionsService implements TradeConditionsContract
      * @throws APIException
      */
     public function list(
-        ?array $id = null,
+        ?string $id = null,
         int $itemsPerPage = 40,
         int $page = 1,
         RequestOptions|array|null $requestOptions = null,

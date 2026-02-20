@@ -93,10 +93,8 @@ interface OrdersContract
     /**
      * @api
      *
-     * @param list<string> $displayNumber
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
-     * @param list<string> $subsidiary
      * @param RequestOpts|null $requestOptions
      *
      * @return list<Order>
@@ -108,7 +106,7 @@ interface OrdersContract
         ?string $createdAtBefore = null,
         ?string $createdAtStrictlyAfter = null,
         ?string $createdAtStrictlyBefore = null,
-        ?array $displayNumber = null,
+        ?string $displayNumber = null,
         int $itemsPerPage = 40,
         ?string $lastUpdatedAtAfter = null,
         ?string $lastUpdatedAtBefore = null,
@@ -119,7 +117,7 @@ interface OrdersContract
         ?string $orderDateStrictlyAfter = null,
         ?string $orderDateStrictlyBefore = null,
         int $page = 1,
-        ?array $subsidiary = null,
+        ?string $subsidiary = null,
         RequestOptions|array|null $requestOptions = null,
     ): array;
 

@@ -33,7 +33,7 @@ final class OrdersTest extends TestCase
     public function testRetrieve(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->retrieve('id');
@@ -46,7 +46,7 @@ final class OrdersTest extends TestCase
     public function testUpdate(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->update('id');
@@ -59,7 +59,7 @@ final class OrdersTest extends TestCase
     public function testList(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->list();
@@ -72,7 +72,7 @@ final class OrdersTest extends TestCase
     public function testCreateAttachment(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->createAttachment('id');
@@ -85,7 +85,7 @@ final class OrdersTest extends TestCase
     public function testDownloadDocument(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism doesn\'t support application/octet-stream responses');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->downloadDocument(
@@ -102,7 +102,7 @@ final class OrdersTest extends TestCase
     public function testDownloadDocumentWithOptionalParams(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism doesn\'t support application/octet-stream responses');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->downloadDocument(
@@ -119,7 +119,7 @@ final class OrdersTest extends TestCase
     public function testListBackToBack(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->listBackToBack('id');
@@ -132,7 +132,7 @@ final class OrdersTest extends TestCase
     public function testListPurchase(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->listPurchase('id');
@@ -145,7 +145,7 @@ final class OrdersTest extends TestCase
     public function testListSales(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->listSales('id');
@@ -158,7 +158,7 @@ final class OrdersTest extends TestCase
     public function testListTransferOrders(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->orders->listTransferOrders('id');
