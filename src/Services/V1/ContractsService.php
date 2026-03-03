@@ -13,6 +13,8 @@ use QbilPhpSDK\V1\Contracts\Contract;
 use QbilPhpSDK\V1\Contracts\ContractListParams\Subsidiary;
 
 /**
+ * The **Contract API** provides read-only access to contracts (both purchase and sales).
+ *
  * @phpstan-import-type SubsidiaryShape from \QbilPhpSDK\V1\Contracts\ContractListParams\Subsidiary
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */

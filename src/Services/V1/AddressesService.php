@@ -13,6 +13,8 @@ use QbilPhpSDK\V1\Addresses\Address;
 use QbilPhpSDK\V1\Addresses\AddressListParams\Relation;
 
 /**
+ * The **Address API** provides read-only access to all the addresses.
+ *
  * @phpstan-import-type RelationShape from \QbilPhpSDK\V1\Addresses\AddressListParams\Relation
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */

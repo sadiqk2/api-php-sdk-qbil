@@ -14,6 +14,9 @@ use QbilPhpSDK\V1\Pallets\Pallet;
 use QbilPhpSDK\V1\Pallets\PalletListParams;
 
 /**
+ * The Pallet API provides read-only access to root data pallets,
+ * like name, description, type, etc.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PalletsRawService implements PalletsRawContract

@@ -14,6 +14,8 @@ use QbilPhpSDK\V1\Subsidiaries\Subsidiary;
 use QbilPhpSDK\V1\Subsidiaries\SubsidiaryListParams;
 
 /**
+ * The **Subsidiary API** provides read-only access to subsidiaries of the company (current customer).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class SubsidiariesRawService implements SubsidiariesRawContract

@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\StocksContract;
 use QbilPhpSDK\V1\Stocks\Stock;
 
 /**
+ * The **Stock API** provides read-only access to stock lots.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class StocksService implements StocksContract

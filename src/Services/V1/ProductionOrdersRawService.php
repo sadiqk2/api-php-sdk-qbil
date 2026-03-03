@@ -18,6 +18,8 @@ use QbilPhpSDK\V1\ProductionOrders\ProductionOrderUpdateParams;
 use QbilPhpSDK\V1\ProductionOrders\ProductionResult;
 
 /**
+ * The **Production API** allows for managing production orders. It supports both reading existing order details and creating new ones.
+ *
  * @phpstan-import-type ProductionIngredientShape from \QbilPhpSDK\V1\ProductionOrders\ProductionIngredient
  * @phpstan-import-type ProductionResultShape from \QbilPhpSDK\V1\ProductionOrders\ProductionResult
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
