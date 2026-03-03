@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\SubsidiariesContract;
 use QbilPhpSDK\V1\Subsidiaries\Subsidiary;
 
 /**
+ * The **Subsidiary API** provides read-only access to subsidiaries of the company (current customer).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class SubsidiariesService implements SubsidiariesContract

@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\TradeConditionsContract;
 use QbilPhpSDK\V1\TradeConditions\TradeCondition;
 
 /**
+ *   The **Trade Condition API** provides secure access to the terms and conditions associated with trade agreements.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class TradeConditionsService implements TradeConditionsContract

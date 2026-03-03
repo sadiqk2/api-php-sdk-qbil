@@ -14,6 +14,8 @@ use QbilPhpSDK\V1\ContainerOrders\ContainerOrderLine;
 use QbilPhpSDK\V1\ContainerOrders\ContainerOrderUpdateParams;
 
 /**
+ * The Order API allows for managing various order types, including purchase, sales, stock movements, and back-to-back orders. It supports retrieving order data and updating existing records. Additionally, the API supports uploading attachments, enabling users to associate files with specific orders.
+ *
  * @phpstan-import-type ContainerOrderLineShape from \QbilPhpSDK\V1\ContainerOrders\ContainerOrderLine
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */

@@ -12,6 +12,9 @@ use QbilPhpSDK\ServiceContracts\V1\PackagingContract;
 use QbilPhpSDK\V1\Packaging\Packaging;
 
 /**
+ * The **Packaging API** provides read-only access to root data packaging,
+ * like name, description, type, etc.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PackagingService implements PackagingContract

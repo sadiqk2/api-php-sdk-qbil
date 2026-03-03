@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\ProductsContract;
 use QbilPhpSDK\V1\Products\Product;
 
 /**
+ * The **Product API** provides read-only access to root data product.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class ProductsService implements ProductsContract

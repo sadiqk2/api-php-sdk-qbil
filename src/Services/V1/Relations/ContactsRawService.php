@@ -15,6 +15,8 @@ use QbilPhpSDK\V1\Relations\Contacts\ContactListParams;
 use QbilPhpSDK\V1\Relations\Contacts\ContactRetrieveParams;
 
 /**
+ * The **Relation API** provides read-only access to root data relations (suppliers, customers, transporters, etc).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class ContactsRawService implements ContactsRawContract

@@ -36,6 +36,8 @@ use QbilPhpSDK\V1\Orders\OrderUpdateParams\TransferOrderline;
 use QbilPhpSDK\V1\Orders\Transport;
 
 /**
+ * The Order API allows for managing various order types, including purchase, sales, stock movements, and back-to-back orders. It supports retrieving order data and updating existing records. Additionally, the API supports uploading attachments, enabling users to associate files with specific orders.
+ *
  * @phpstan-import-type BackToBackOrderLineShape from \QbilPhpSDK\V1\Orders\OrderUpdateParams\BackToBackOrderLine
  * @phpstan-import-type PurchaseOrderLineShape from \QbilPhpSDK\V1\Orders\OrderUpdateParams\PurchaseOrderLine
  * @phpstan-import-type SalesOrderLineShape from \QbilPhpSDK\V1\Orders\OrderUpdateParams\SalesOrderLine

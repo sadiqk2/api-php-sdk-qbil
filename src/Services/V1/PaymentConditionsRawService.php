@@ -14,6 +14,8 @@ use QbilPhpSDK\V1\PaymentConditions\PaymentCondition;
 use QbilPhpSDK\V1\PaymentConditions\PaymentConditionListParams;
 
 /**
+ *   The **Payment Condition API** provides secure access to the terms and conditions associated with payment agreements.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PaymentConditionsRawService implements PaymentConditionsRawContract
