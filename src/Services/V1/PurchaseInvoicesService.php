@@ -12,6 +12,9 @@ use QbilPhpSDK\ServiceContracts\V1\PurchaseInvoicesContract;
 use QbilPhpSDK\V1\PurchaseInvoices\PurchaseInvoice;
 
 /**
+ * The **Purchase Invoice API** provides read-only access to details regarding invoices related to goods or services purchased.:
+ * The API supports filtering by parameters like invoice date, supplier, or invoice status (e.g., paid, unpaid, overdue).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PurchaseInvoicesService implements PurchaseInvoicesContract

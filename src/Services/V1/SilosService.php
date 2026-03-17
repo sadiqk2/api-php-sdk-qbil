@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\SilosContract;
 use QbilPhpSDK\V1\Silos\Silo;
 
 /**
+ * The **Silo API** provides read-only access to root data silos.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class SilosService implements SilosContract

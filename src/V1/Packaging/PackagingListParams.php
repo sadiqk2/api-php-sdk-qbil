@@ -15,7 +15,7 @@ use QbilPhpSDK\Core\Contracts\BaseModel;
  * @see QbilPhpSDK\Services\V1\PackagingService::list()
  *
  * @phpstan-type PackagingListParamsShape = array{
- *   code?: list<string>|null, itemsPerPage?: int|null, page?: int|null
+ *   code?: string|null, itemsPerPage?: int|null, page?: int|null
  * }
  */
 final class PackagingListParams implements BaseModel
@@ -24,9 +24,8 @@ final class PackagingListParams implements BaseModel
     use SdkModel;
     use SdkParams;
 
-    /** @var list<string>|null $code */
-    #[Optional(list: 'string')]
-    public ?array $code;
+    #[Optional]
+    public ?string $code;
 
     /**
      * The number of items per page.
@@ -49,11 +48,9 @@ final class PackagingListParams implements BaseModel
      * Construct an instance from the required parameters.
      *
      * You must use named parameters to construct any parameters with a default value.
-     *
-     * @param list<string>|null $code
      */
     public static function with(
-        ?array $code = null,
+        ?string $code = null,
         ?int $itemsPerPage = null,
         ?int $page = null
     ): self {
@@ -66,10 +63,7 @@ final class PackagingListParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $code
-     */
-    public function withCode(array $code): self
+    public function withCode(string $code): self
     {
         $self = clone $this;
         $self['code'] = $code;

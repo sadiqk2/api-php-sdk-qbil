@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\PaymentConditionsContract;
 use QbilPhpSDK\V1\PaymentConditions\PaymentCondition;
 
 /**
+ *   The **Payment Condition API** provides secure access to the terms and conditions associated with payment agreements.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PaymentConditionsService implements PaymentConditionsContract
@@ -54,7 +56,6 @@ final class PaymentConditionsService implements PaymentConditionsContract
      *
      * Retrieves the collection of PaymentCondition resources.
      *
-     * @param list<string> $id
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
      * @param RequestOpts|null $requestOptions
@@ -64,7 +65,7 @@ final class PaymentConditionsService implements PaymentConditionsContract
      * @throws APIException
      */
     public function list(
-        ?array $id = null,
+        ?string $id = null,
         int $itemsPerPage = 40,
         int $page = 1,
         RequestOptions|array|null $requestOptions = null,

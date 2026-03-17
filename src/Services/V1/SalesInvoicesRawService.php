@@ -15,6 +15,9 @@ use QbilPhpSDK\V1\SalesInvoices\SalesInvoice;
 use QbilPhpSDK\V1\SalesInvoices\SalesInvoiceListParams;
 
 /**
+ * The **Sales invoice API** provides read-only access to details regarding invoices related to goods or services sold.
+ * The API supports filtering by parameters like invoice date, or invoice type (e.g., misc, proforma, sales).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class SalesInvoicesRawService implements SalesInvoicesRawContract
@@ -70,7 +73,7 @@ final class SalesInvoicesRawService implements SalesInvoicesRawContract
      *   lastUpdatedAtStrictlyAfter?: string,
      *   lastUpdatedAtStrictlyBefore?: string,
      *   page?: int,
-     *   type?: list<string>,
+     *   type?: string,
      * }|SalesInvoiceListParams $params
      * @param RequestOpts|null $requestOptions
      *

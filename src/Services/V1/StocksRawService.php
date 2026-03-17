@@ -15,6 +15,8 @@ use QbilPhpSDK\V1\Stocks\Stock;
 use QbilPhpSDK\V1\Stocks\StockListParams;
 
 /**
+ * The **Stock API** provides read-only access to stock lots.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class StocksRawService implements StocksRawContract
@@ -57,9 +59,9 @@ final class StocksRawService implements StocksRawContract
      *
      * @param array{
      *   itemsPerPage?: int,
-     *   ourReference?: list<string>,
+     *   ourReference?: string,
      *   page?: int,
-     *   remainingQuantity?: list<float>,
+     *   remainingQuantity?: float,
      *   remainingQuantityBetween?: string,
      *   remainingQuantityGt?: string,
      *   remainingQuantityGte?: string,

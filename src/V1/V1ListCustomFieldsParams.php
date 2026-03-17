@@ -18,7 +18,7 @@ use QbilPhpSDK\V1\V1ListCustomFieldsParams\Location;
  * @phpstan-type V1ListCustomFieldsParamsShape = array{
  *   itemsPerPage?: int|null,
  *   location?: null|Location|value-of<Location>,
- *   name?: list<string>|null,
+ *   name?: string|null,
  *   page?: int|null,
  * }
  */
@@ -42,9 +42,8 @@ final class V1ListCustomFieldsParams implements BaseModel
     #[Optional(enum: Location::class)]
     public ?string $location;
 
-    /** @var list<string>|null $name */
-    #[Optional(list: 'string')]
-    public ?array $name;
+    #[Optional]
+    public ?string $name;
 
     /**
      * The collection page number.
@@ -63,12 +62,11 @@ final class V1ListCustomFieldsParams implements BaseModel
      * You must use named parameters to construct any parameters with a default value.
      *
      * @param Location|value-of<Location>|null $location
-     * @param list<string>|null $name
      */
     public static function with(
         ?int $itemsPerPage = null,
         Location|string|null $location = null,
-        ?array $name = null,
+        ?string $name = null,
         ?int $page = null,
     ): self {
         $self = new self;
@@ -105,10 +103,7 @@ final class V1ListCustomFieldsParams implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $name
-     */
-    public function withName(array $name): self
+    public function withName(string $name): self
     {
         $self = clone $this;
         $self['name'] = $name;

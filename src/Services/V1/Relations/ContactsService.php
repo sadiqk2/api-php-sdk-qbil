@@ -12,6 +12,8 @@ use QbilPhpSDK\ServiceContracts\V1\Relations\ContactsContract;
 use QbilPhpSDK\V1\Relations\Contacts\Contact;
 
 /**
+ * The **Relation API** provides read-only access to root data relations (suppliers, customers, transporters, etc).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class ContactsService implements ContactsContract

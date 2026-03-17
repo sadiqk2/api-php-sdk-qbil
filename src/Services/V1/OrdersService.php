@@ -27,6 +27,8 @@ use QbilPhpSDK\V1\Orders\OrderUpdateParams\TransferOrderline;
 use QbilPhpSDK\V1\Orders\Transport;
 
 /**
+ * The Order API allows for managing various order types, including purchase, sales, stock movements, and back-to-back orders. It supports retrieving order data and updating existing records. Additionally, the API supports uploading attachments, enabling users to associate files with specific orders.
+ *
  * @phpstan-import-type BackToBackOrderLineShape from \QbilPhpSDK\V1\Orders\OrderUpdateParams\BackToBackOrderLine
  * @phpstan-import-type PurchaseOrderLineShape from \QbilPhpSDK\V1\Orders\OrderUpdateParams\PurchaseOrderLine
  * @phpstan-import-type SalesOrderLineShape from \QbilPhpSDK\V1\Orders\OrderUpdateParams\SalesOrderLine
@@ -161,10 +163,8 @@ final class OrdersService implements OrdersContract
      *
      * Get all the orders
      *
-     * @param list<string> $displayNumber
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
-     * @param list<string> $subsidiary
      * @param RequestOpts|null $requestOptions
      *
      * @return list<Order>
@@ -176,7 +176,7 @@ final class OrdersService implements OrdersContract
         ?string $createdAtBefore = null,
         ?string $createdAtStrictlyAfter = null,
         ?string $createdAtStrictlyBefore = null,
-        ?array $displayNumber = null,
+        ?string $displayNumber = null,
         int $itemsPerPage = 40,
         ?string $lastUpdatedAtAfter = null,
         ?string $lastUpdatedAtBefore = null,
@@ -187,7 +187,7 @@ final class OrdersService implements OrdersContract
         ?string $orderDateStrictlyAfter = null,
         ?string $orderDateStrictlyBefore = null,
         int $page = 1,
-        ?array $subsidiary = null,
+        ?string $subsidiary = null,
         RequestOptions|array|null $requestOptions = null,
     ): array {
         $params = Util::removeNulls(

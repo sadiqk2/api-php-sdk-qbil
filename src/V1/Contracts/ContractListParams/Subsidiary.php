@@ -9,16 +9,15 @@ use QbilPhpSDK\Core\Concerns\SdkModel;
 use QbilPhpSDK\Core\Contracts\BaseModel;
 
 /**
- * @phpstan-type SubsidiaryShape = array{id?: list<string>|null}
+ * @phpstan-type SubsidiaryShape = array{id?: string|null}
  */
 final class Subsidiary implements BaseModel
 {
     /** @use SdkModel<SubsidiaryShape> */
     use SdkModel;
 
-    /** @var list<string>|null $id */
-    #[Optional(list: 'string')]
-    public ?array $id;
+    #[Optional]
+    public ?string $id;
 
     public function __construct()
     {
@@ -29,10 +28,8 @@ final class Subsidiary implements BaseModel
      * Construct an instance from the required parameters.
      *
      * You must use named parameters to construct any parameters with a default value.
-     *
-     * @param list<string>|null $id
      */
-    public static function with(?array $id = null): self
+    public static function with(?string $id = null): self
     {
         $self = new self;
 
@@ -41,10 +38,7 @@ final class Subsidiary implements BaseModel
         return $self;
     }
 
-    /**
-     * @param list<string> $id
-     */
-    public function withID(array $id): self
+    public function withID(string $id): self
     {
         $self = clone $this;
         $self['id'] = $id;

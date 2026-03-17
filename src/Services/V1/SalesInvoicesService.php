@@ -12,6 +12,9 @@ use QbilPhpSDK\ServiceContracts\V1\SalesInvoicesContract;
 use QbilPhpSDK\V1\SalesInvoices\SalesInvoice;
 
 /**
+ * The **Sales invoice API** provides read-only access to details regarding invoices related to goods or services sold.
+ * The API supports filtering by parameters like invoice date, or invoice type (e.g., misc, proforma, sales).
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class SalesInvoicesService implements SalesInvoicesContract
@@ -56,7 +59,6 @@ final class SalesInvoicesService implements SalesInvoicesContract
      *
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
-     * @param list<string> $type
      * @param RequestOpts|null $requestOptions
      *
      * @return list<SalesInvoice>
@@ -78,7 +80,7 @@ final class SalesInvoicesService implements SalesInvoicesContract
         ?string $lastUpdatedAtStrictlyAfter = null,
         ?string $lastUpdatedAtStrictlyBefore = null,
         int $page = 1,
-        ?array $type = null,
+        ?string $type = null,
         RequestOptions|array|null $requestOptions = null,
     ): array {
         $params = Util::removeNulls(

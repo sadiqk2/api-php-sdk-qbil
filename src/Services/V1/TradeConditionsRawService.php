@@ -14,6 +14,8 @@ use QbilPhpSDK\V1\TradeConditions\TradeCondition;
 use QbilPhpSDK\V1\TradeConditions\TradeConditionListParams;
 
 /**
+ *   The **Trade Condition API** provides secure access to the terms and conditions associated with trade agreements.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class TradeConditionsRawService implements TradeConditionsRawContract
@@ -55,7 +57,7 @@ final class TradeConditionsRawService implements TradeConditionsRawContract
      * Retrieves the collection of TradeCondition resources.
      *
      * @param array{
-     *   id?: list<string>, itemsPerPage?: int, page?: int
+     *   id?: string, itemsPerPage?: int, page?: int
      * }|TradeConditionListParams $params
      * @param RequestOpts|null $requestOptions
      *

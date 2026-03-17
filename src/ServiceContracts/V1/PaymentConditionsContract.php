@@ -29,7 +29,6 @@ interface PaymentConditionsContract
     /**
      * @api
      *
-     * @param list<string> $id
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
      * @param RequestOpts|null $requestOptions
@@ -39,7 +38,7 @@ interface PaymentConditionsContract
      * @throws APIException
      */
     public function list(
-        ?array $id = null,
+        ?string $id = null,
         int $itemsPerPage = 40,
         int $page = 1,
         RequestOptions|array|null $requestOptions = null,

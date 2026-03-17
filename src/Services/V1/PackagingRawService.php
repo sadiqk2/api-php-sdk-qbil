@@ -14,6 +14,9 @@ use QbilPhpSDK\V1\Packaging\Packaging;
 use QbilPhpSDK\V1\Packaging\PackagingListParams;
 
 /**
+ * The **Packaging API** provides read-only access to root data packaging,
+ * like name, description, type, etc.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PackagingRawService implements PackagingRawContract
@@ -55,7 +58,7 @@ final class PackagingRawService implements PackagingRawContract
      * Retrieves the collection of Packaging resources.
      *
      * @param array{
-     *   code?: list<string>, itemsPerPage?: int, page?: int
+     *   code?: string, itemsPerPage?: int, page?: int
      * }|PackagingListParams $params
      * @param RequestOpts|null $requestOptions
      *

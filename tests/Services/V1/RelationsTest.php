@@ -32,7 +32,7 @@ final class RelationsTest extends TestCase
     public function testRetrieve(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->relations->retrieve('id');
@@ -45,7 +45,7 @@ final class RelationsTest extends TestCase
     public function testList(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->relations->list();
@@ -58,7 +58,7 @@ final class RelationsTest extends TestCase
     public function testListAddresses(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->relations->listAddresses('id');
@@ -71,7 +71,7 @@ final class RelationsTest extends TestCase
     public function testListSilos(): void
     {
         if (UnsupportedMockTests::$skip) {
-            $this->markTestSkipped('Prism tests are disabled');
+            $this->markTestSkipped('Mock server tests are disabled');
         }
 
         $result = $this->client->v1->relations->listSilos('id');

@@ -12,6 +12,9 @@ use QbilPhpSDK\ServiceContracts\V1\PalletsContract;
 use QbilPhpSDK\V1\Pallets\Pallet;
 
 /**
+ * The Pallet API provides read-only access to root data pallets,
+ * like name, description, type, etc.
+ *
  * @phpstan-import-type RequestOpts from \QbilPhpSDK\RequestOptions
  */
 final class PalletsService implements PalletsContract
@@ -54,7 +57,6 @@ final class PalletsService implements PalletsContract
      *
      * Retrieves the collection of Pallet resources.
      *
-     * @param list<string> $code
      * @param int $itemsPerPage The number of items per page
      * @param int $page The collection page number
      * @param RequestOpts|null $requestOptions
@@ -64,7 +66,7 @@ final class PalletsService implements PalletsContract
      * @throws APIException
      */
     public function list(
-        ?array $code = null,
+        ?string $code = null,
         int $itemsPerPage = 40,
         int $page = 1,
         RequestOptions|array|null $requestOptions = null,
